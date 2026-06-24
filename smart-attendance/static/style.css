@@ -1,0 +1,59 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: #ffffff;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #00c853;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.present {
+    background: #c8f7c5;
+    color: green;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.absent {
+    background: #f8c0c0;
+    color: red;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.reward {
+    background: gold;
+    color: black;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 12px;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px gold; }
+    to { box-shadow: 0 0 25px orange; }
+}

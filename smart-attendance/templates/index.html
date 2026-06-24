@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Attendance</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>📘 Smart Attendance System</h1>
+<h2>Cybersecurity & Electrical ⚡</h2>
+
+<form method="POST">
+<div class="container">
+
+{% for s in students %}
+<div class="card">
+    <label>
+        <input type="checkbox" name="present" value="{{ s.roll }}">
+        <strong>{{ s.name }}</strong><br>
+        <span>{{ s.department }}</span>
+    </label>
+</div>
+{% endfor %}
+
+</div>
+
+<button type="submit">✅ Submit Attendance</button>
+</form>
+
+{% if present_count %}
+<hr>
+
+<h3>📊 Result</h3>
+
+<p>Total Students: {{ total }}</p>
+<p>Present: {{ present_count }}</p>
+<p>Absent: {{ total - present_count }}</p>
+
+<div class="result">
+{% for s in students %}
+    {% if s.roll in present %}
+        <p class="present">🟢 {{ s.name }} - Present</p>
+    {% else %}
+        <p class="absent">🔴 {{ s.name }} - Absent</p>
+    {% endif %}
+{% endfor %}
+</div>
+
+{% if full_attendance %}
+<div class="reward">
+    🎉🎉 VERY GOOD 🎉🎉  
+    <br>⭐ 100% Attendance ⭐
+</div>
+{% endif %}
+
+<button onclick="window.print()">📄 Convert to PDF</button>
+
+{% endif %}
+
+<script src="/static/script.js"></script>
+</body>
+</html>
