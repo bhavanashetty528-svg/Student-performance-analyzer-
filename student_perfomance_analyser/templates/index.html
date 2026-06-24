@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>📊 Student Performance Analyzer 💖</h1>
+
+    <form action="/result" method="post">
+        <input type="text" name="name" placeholder="👤 Student Name" required>
+        <input type="text" name="roll" placeholder="🎓 Roll Number" required>
+        <input type="text" name="section" placeholder="🏫 Section" required>
+
+        <input type="number" name="maths" placeholder="📐 Maths" required>
+        <input type="number" name="chemistry" placeholder="🧪 Chemistry" required>
+        <input type="number" name="mechanics" placeholder="⚙ Mechanics" required>
+        <input type="number" name="ai" placeholder="🤖 AI" required>
+        <input type="number" name="communication" placeholder="🗣 Communication" required>
+        <input type="number" name="python" placeholder="🐍 Python" required>
+
+        <button>✨ Analyze Performance ✨</button>
+    </form>
+</div>
+
+</body>
+</html>

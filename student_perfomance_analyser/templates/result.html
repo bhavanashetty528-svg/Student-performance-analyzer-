@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎉 Result Card 🎉</h1>
+
+    <p>👤 <b>Name:</b> {{ name }}</p>
+    <p>🎓 <b>Roll:</b> {{ roll }}</p>
+    <p>🏫 <b>Section:</b> {{ section }}</p>
+
+    <hr>
+
+    {% for subject, mark in marks.items() %}
+        <p>{{ subject }} : {{ mark }}</p>
+    {% endfor %}
+
+    <hr>
+
+    <h2>📊 Total: {{ total }}</h2>
+    <h2>📈 Average: {{ average }}</h2>
+
+    <h2 class="status">{{ status }}</h2>
+    <h2 class="category">{{ category }}</h2>
+
+    <h3>🎁 Reward:</h3>
+    <p>{{ reward }}</p>
+
+    <h3>📝 Improvement Suggestions:</h3>
+    <ul>
+        {% for s in suggestions %}
+        <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">🔁 Analyze Another Student</a>
+</div>
+
+</body>
+</html>

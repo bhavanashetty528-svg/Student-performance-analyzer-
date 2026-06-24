@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(135deg, #000000, #ff4f9a);
+    font-family: 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.container {
+    width: 450px;
+    background: #111;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px hotpink;
+    text-align: center;
+}
+
+h1 {
+    color: hotpink;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+input::placeholder {
+    color: #ff9acb;
+}
+
+button {
+    width: 95%;
+    padding: 12px;
+    background: hotpink;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff77b7;
+}
+
+.status {
+    color: #00ff88;
+}
+
+.category {
+    color: #ffccff;
+}
+
+a {
+    color: hotpink;
+    text-decoration: none;
+    font-weight: bold;
+}
